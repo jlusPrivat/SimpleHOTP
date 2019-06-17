@@ -1,0 +1,11 @@
+# Syntax coloring map for SimpleHOTP
+
+# Datatypes (KEYWORD1)
+
+# Methods and Functions (KEYWORD2)
+generateSha	KEYWORD2
+
+# Structures (KEYWORD3)
+SimpleSHA1	KEYWORD3
+
+# Constants (LITERAL1)
