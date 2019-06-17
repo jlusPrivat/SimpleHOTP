@@ -19,8 +19,9 @@ of messages with a length of up to (2^64)-1 Bits
 ### SHA1 Hash generation
 In this example we want to generate the SHA1 for the message
 `Natural Water is only natural, because it is pure.`.
+    
     #include <SimpleHOTP.h>
-	
+    
     char message[] = "Natural Water is only natural, because it is pure.";
     uint64_t ml = (sizeof(message)-1) * 8; // number of bits in message
     uint32_t hash[5] = {}; // This will contain the 160-bit Hash
