@@ -1,5 +1,5 @@
 # SimpleHOTP
-A leightweight HOTP (HMAC - Based one Time Password) Generator for Arduino.  
+A lightweight HOTP (HMAC - Based one Time Password) Generator for Arduino.  
 This library is for those, who want to save on memory and still use HOTPs, as there are no heavy
 third-party dependencies included.
 
