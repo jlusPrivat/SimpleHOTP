@@ -22,14 +22,6 @@ Simple SHA class generates a 160-bit SHA-1 Hash from an Array of 8-Bit Data
 
 class SimpleSHA1 {
 	private:
-	
-		/* Converts a small Endian 64-bit Integer to a big Endian, if
-		 * neccessary
-		 *
-		 * Param toConvert: the 64-bit unsigned integer to convert
-		 * Returns: the big Endian 64-bit integer
-		 */
-		static uint32_t convertBigEndian32 (uint32_t toConvert);
 		
 		/* Rotates a 32-bit integer left
 		 *
@@ -49,6 +41,7 @@ class SimpleSHA1 {
 		 * Param returner: an empty 5 element 32-bit array
 		 */
 		static void generateSha (char *message, uint64_t ml, uint32_t *returner);
+		
 };
 
 

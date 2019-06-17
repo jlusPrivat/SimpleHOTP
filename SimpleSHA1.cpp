@@ -75,27 +75,6 @@ void SimpleSHA1::generateSha (char *message, uint64_t ml, uint32_t *returner) {
 
 
 
-uint32_t SimpleSHA1::convertBigEndian32 (uint32_t toConvert) {
-	union ConversionHelper {
-		uint32_t integer;
-		uint8_t byde[4];
-	} check = {0xAA000000};
-	
-	// it is big-Endian already
-	if (check.byde[0] == 0xAA)
-		return toConvert;
-	
-	// convert to big-Endian
-	ConversionHelper input = {toConvert};
-	ConversionHelper output = {0};
-	for (uint8_t i = 0; i < 4; i++) {
-		output.byde[i] = (uint8_t) input.byde[3-i];
-	}
-	return output.integer;
-}
-
-
-
 uint32_t SimpleSHA1::rotL (uint32_t input, uint8_t n) {
 	return (input << n) | (input >> (32-n));
 }
