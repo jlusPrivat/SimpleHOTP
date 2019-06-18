@@ -16,7 +16,7 @@ https://github.com/jlusPrivat/SimpleHOTP
 
 #include "Arduino.h"
 #include "SimpleSHA1.h"
-
+#include "Key.h"
 
 
 #endif
