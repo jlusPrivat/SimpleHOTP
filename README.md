@@ -16,26 +16,6 @@ authentication
 5. Generate [SHA1 kryptographic hashes](https://tools.ietf.org/html/rfc3174 "RFC 3174")
 of messages with a length of up to (2^64)-1 Bits
 
-## Usage
-These usage guides are for those, who seek more direct ways to use this library.
-For more and simpler information on the usage, please check out the examples!
-### SHA1 Hash generation
-In this example we want to generate the SHA1 for the message
-`Natural Water is only natural, because it is pure.`.
-Please note, that in this example one byte had to be substracted from the length of the string, because
-c++ automatically adds a null-terminator-byte to the end of strings.
-
-```C++
-#include <SimpleHOTP.h>
-
-uint8_t message[] = "Natural Water is only natural, because it is pure.";
-uint64_t ml = (sizeof(message)-1) * 8; // number of bits in message
-uint32_t hash[5] = {}; // This will contain the 160-bit Hash
-SimpleSHA1::generateSha(message, ml, hash);
-```
-
-This should result in `FBB35A64 E3913B60 DD150C0F 1C218FC7 3B3C8BD8`.
-
 ## Changelog
 Only version changes as labeled in git are listed here.
 Version numbers are [semantic](https://semver.org/ "Semantic Versioning").

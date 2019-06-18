@@ -1,5 +1,6 @@
 ToDo:
 - Arduinoish Examples for every feature
-- Update README for every feature with remove and usage description
+- Update README for every feature with remove
 - Update keywords.txt
 - Tag Version and publish issue on https://github.com/arduino/Arduino/issues
+- README with simple usage only for HOTP validation (the rest is best described by examples and header files)
