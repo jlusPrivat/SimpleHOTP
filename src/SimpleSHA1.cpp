@@ -5,7 +5,7 @@
 #define h3 returner[3]
 #define h4 returner[4]
 
-void SimpleSHA1::generateSha (char *message, uint64_t ml, uint32_t *returner) {
+void SimpleSHA1::generateSha (uint8_t *message, uint64_t ml, uint32_t *returner) {
 	// initialize variables
 	h0 = 0x67452301;
 	h1 = 0xEFCDAB89;

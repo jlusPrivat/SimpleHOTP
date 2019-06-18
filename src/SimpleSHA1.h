@@ -36,11 +36,11 @@ class SimpleSHA1 {
 		
 		/* Generates the Sha-1 Hash for a given message
 		 * 
-		 * Param message: An Array of chars (8 Bit) containing the message
+		 * Param message: An Array of Bytes containing the message
 		 * Param ml: the length of the message (in bits)
 		 * Param returner: an empty 5 element 32-bit array
 		 */
-		static void generateSha (char *message, uint64_t ml, uint32_t *returner);
+		static void generateSha (uint8_t *message, uint64_t ml, uint32_t *returner);
 		
 };
 
