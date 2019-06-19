@@ -23,7 +23,7 @@ void SimpleHMAC::generateHMAC (Key &key, uint8_t *message,
 	}
 	
 	// run the inner SHA and append to outerMessage
-	SimpleSHA1::generateSha(innerMessage,
+	SimpleSHA1::generateSHA(innerMessage,
 							ml+512, &outerMessage.u32[16]);
 	
 	// union: convert the 32-bit value to big endian
@@ -31,7 +31,7 @@ void SimpleHMAC::generateHMAC (Key &key, uint8_t *message,
 		outerMessage.u32[i] = convertBigEndian32(outerMessage.u32[i]);
 	
 	// now run the outer SHA
-	SimpleSHA1::generateSha(outerMessage.u8, 672, returner);
+	SimpleSHA1::generateSHA(outerMessage.u8, 672, returner);
 }
 
 

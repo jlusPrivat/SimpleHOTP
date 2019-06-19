@@ -4,7 +4,7 @@
 Key	KEYWORD1
 
 # Methods and Functions (KEYWORD2)
-generateSha	KEYWORD2
+generateSHA	KEYWORD2
 getSize	KEYWORD2
 exportToArray	KEYWORD2
 generateHMAC	KEYWORD2

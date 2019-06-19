@@ -36,7 +36,7 @@ namespace SimpleSHA1 {
 	 * Param ml: the length of the message (in bits)
 	 * Param returner: an empty 5 element 32-bit array
 	 */
-	void generateSha (uint8_t *message, uint64_t ml, uint32_t *returner);
+	void generateSHA (uint8_t *message, uint64_t ml, uint32_t *returner);
 	
 }
 

@@ -20,7 +20,7 @@ void setup () {
   ml *= 8;
   
   uint32_t hash[5] = {}; // This will contain the 160-bit Hash
-  SimpleSHA1::generateSha(msgArray, ml, hash);
+  SimpleSHA1::generateSHA(msgArray, ml, hash);
   
   
   // output every element of the hash as the hexadecimal
