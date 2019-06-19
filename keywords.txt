@@ -7,8 +7,10 @@ Key	KEYWORD1
 generateSha	KEYWORD2
 getSize	KEYWORD2
 exportToArray	KEYWORD2
+generateHMAC	KEYWORD2
 
 # Structures (KEYWORD3)
 SimpleSHA1	KEYWORD3
+SimpleHMAC	KEYWORD3
 
 # Constants (LITERAL1)
