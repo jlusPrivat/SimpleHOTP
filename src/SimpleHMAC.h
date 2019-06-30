@@ -32,6 +32,11 @@ namespace SimpleHMAC {
 	void generateHMAC (Key &key, uint8_t *message, uint64_t ml, uint32_t *returner);
 	
 	
+	/* Returns: true, if machine has Big Endianness; false otherwise
+	 */
+	bool isBigEndian ();
+	
+	
 	/* converts a number from little to big endian, if machine is little endian
 	 *
 	 * Param toConvert: the 32-bit value to convert to big endian

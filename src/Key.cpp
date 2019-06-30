@@ -11,7 +11,7 @@ Key::Key (uint8_t *importVal, uint8_t importSize) {
 
 Key::Key (uint8_t generationSize) {
 	size = generationSize;
-	for (uint8_t i = 0; (i < generationSize) && i < 64; i++) {
+	for (uint8_t i = 0; (i < generationSize) && (i < 64); i++) {
 		key[i] = (uint8_t) random(0xFF);
 	}
 }

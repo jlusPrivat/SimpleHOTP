@@ -11,7 +11,7 @@ void SimpleHMAC::generateHMAC (Key &key, uint8_t *message,
 	key.exportToArray(innerMessage);
 	key.exportToArray(outerMessage.u8);
 	
-	for (uint8_t i = 0; (i<innerMessageLength) || (i<84) ; i++) {
+	for (size_t i = 0; (i<innerMessageLength) || (i<64); i++) {
 		// pad the key
 		if (i < 64) {
 			innerMessage[i] ^= 0x36;
@@ -23,8 +23,7 @@ void SimpleHMAC::generateHMAC (Key &key, uint8_t *message,
 	}
 	
 	// run the inner SHA and append to outerMessage
-	SimpleSHA1::generateSHA(innerMessage,
-							ml+512, &outerMessage.u32[16]);
+	SimpleSHA1::generateSHA(innerMessage, ml+512, &outerMessage.u32[16]);
 	
 	// union: convert the 32-bit value to big endian
 	for (uint8_t i = 16; i < 21; i++)
@@ -36,15 +35,25 @@ void SimpleHMAC::generateHMAC (Key &key, uint8_t *message,
 
 
 
-uint32_t SimpleHMAC::convertBigEndian32 (uint32_t toConvert) {
-	union ConversionHelper {
+bool SimpleHMAC::isBigEndian () {
+	union {
 		uint32_t integer;
 		uint8_t byde[4];
 	} check = {0xAA000000};
-	
+	return check.byde[0] == 0xAA;
+}
+
+
+
+uint32_t SimpleHMAC::convertBigEndian32 (uint32_t toConvert) {
 	// it is big-Endian already
-	if (check.byde[0] == 0xAA)
+	if (isBigEndian())
 		return toConvert;
+	
+	union ConversionHelper {
+		uint32_t integer;
+		uint8_t byde[4];
+	};
 	
 	// convert to big-Endian
 	ConversionHelper input = {toConvert};

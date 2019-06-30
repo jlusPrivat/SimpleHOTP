@@ -2,12 +2,20 @@
 
 # Datatypes (KEYWORD1)
 Key	KEYWORD1
+SimpleHOTP	KEYWORD1
 
 # Methods and Functions (KEYWORD2)
 generateSHA	KEYWORD2
 getSize	KEYWORD2
 exportToArray	KEYWORD2
 generateHMAC	KEYWORD2
+validate	KEYWORD2
+generateHOTP	KEYWORD2
+setResync	KEYWORD2
+setDigits	KEYWORD2
+setThrottle	KEYWORD2
+resetFailedAttempts	KEYWORD2
+isLocked	KEYWORD2
 
 # Structures (KEYWORD3)
 SimpleSHA1	KEYWORD3
