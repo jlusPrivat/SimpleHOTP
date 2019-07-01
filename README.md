@@ -32,8 +32,8 @@ SimpleHOTP hotp(key, currentCounter);
 
 int nextCounter = 0;
 do {
-	// getUserInput() as placeholder for your function!
-	// it MUST return a 32-bit integer.
+    // getUserInput() as placeholder for your function!
+    // it MUST return a 32-bit integer.
     nextCounter = hotp.validate(getUserInput());
 } while (!nextCounter && !hotp.isLocked());
 
@@ -44,13 +44,14 @@ else {
     // failure
 }
 ```
-For more information on the usage please refer to 
+For more information on the usage please refer to the `.h` files in the `/src` directory.
 
 ## Changelog
 Only version changes as labeled in git are listed here.
 Version numbers are [semantic](https://semver.org/ "Semantic Versioning").
 
-*There are no updates for this library published yet*
+### 1.0.1
+README.md fixed for reference to documentation.
 
 ## License
 Developed by [Jonathan Lusky](https://jlus.de "Private website")  
