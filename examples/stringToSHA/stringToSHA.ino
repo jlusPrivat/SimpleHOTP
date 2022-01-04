@@ -27,9 +27,13 @@ void setup () {
   // representation. The result should be:
   // FBB35A64E3913B60DD150C0F1C218FC73B3C8BD8
   Serial.begin(9600);
+  String shahash = "";
   for (int i = 0; i < 5; i++) {
-    Serial.print(hash[i], HEX);
+    String s = String(hash[i], HEX);
+    if (s.length() == 7) { shahash += "0"; }
+    shahash += s;
   }
+  Serial.println(shahash);
 }
 
 
